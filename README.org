@@ -26,7 +26,15 @@ End to end usage, for the impatient:
       (wide format instead of long)
    5. Plots it.
 
-Example result:
-#+CAPTION: Bandwidth estimate on my laptop for each case as a function of the result array size.
-#+NAME: fig:BW
-[[./bw_example.png]]
+* Example results
+** CoreI5-3220M@2.60GHz
+Bandwidth estimate on my laptop for each case
+as a function of the result array size.
+Compiled with gcc 10.2, ~-O3 -mavx~.
+[[./CoreI5-3220M@2.60GHz.png]]
+** XeonGold6152@2.19GHz.png
+Bandwidth estimate for each case
+as a function of the result array size
+on a single core of a Skylake processor.
+Compiled with icc 2020.0, ~-fno-alias -O3 -xHost~.
+[[./XeonGold6152@2.19GHz.png]]
