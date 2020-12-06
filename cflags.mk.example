@@ -1,0 +1,6 @@
+
+# ICC
+#CFLAGS=-fno-alias -O3 -xHost -std=c99
+
+# GCC
+CFLAGS=-O3 -mavx

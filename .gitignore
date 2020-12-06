@@ -1,0 +1,10 @@
+.DS_Store
+.idea
+.ccls-cache
+*.log
+tmp/
+main
+cflags.mk
+*.csv 
+
+
