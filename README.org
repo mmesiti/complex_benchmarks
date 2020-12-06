@@ -33,7 +33,7 @@ as a function of the result array size.
 Compiled with gcc 10.2, ~-O3 -mavx~.
 
 [[./CoreI5-3220M@2.60GHz.png]]
-** XeonGold6152@2.19GHz.png
+** XeonGold6152@2.19GHz
 Bandwidth estimate for each case
 as a function of the result array size
 on a single core of a Skylake processor.
