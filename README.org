@@ -1,0 +1,32 @@
+#+TITLE: Complex multiplication benchmarks
+
+End to end usage, for the impatient:
+
+1. Create a ~cflags.mk~ file
+   and set the variable ~CFLAGS=...~ in it
+   (see ~cfkags.mk.example~).
+2. Run 
+   #+BEGIN_SRC bash
+   make dataviz
+   #+END_SRC
+   which does the following:
+   1. Creates and initializes 2 arrays of complex numbers,
+      represented either with c99 complexes, or with pairs of values
+      (but the ~re~ part and the ~im~ part
+      are stored in different arrays,
+      in a "SoA"-like fashion).
+   2. runs 7 different types of complex-complex multiplication,
+      using either ~c99~ complexes or the split "SoA" version,
+      multiple times, for many values of the array size.
+      In the ~main()~ you can:
+      - change the size of the array;
+      - change the step at which new sizes are tried.
+   3. Collects the data
+   4. Reformats the data in a nicer table
+      (wide format instead of long)
+   5. Plots it.
+
+Example result:
+#+CAPTION: Bandwidth estimate on my laptop for each case as a function of the result array size.
+#+NAME: fig:BW
+[[./bw_example.png]]

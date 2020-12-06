@@ -4,7 +4,7 @@
 include ./cflags.mk
 
 
-main: main.c cflags.mk
+main: main.c cflags.mk tests.h basic_macros.h common.h
 	#gcc -fno-alias -O3 -xHost -std=c99 -o main main.c
 	echo "Using" $(CC) $(CFLAGS)
 	$(CC) $(CFLAGS) -o main main.c

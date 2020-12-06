@@ -1,24 +1,5 @@
+#include "basic_macros.h"
 #include "common.h"
-
-#define REAL float
-
-#define _MLOOP(m, i) for (int i = 0; i < m; ++i)
-
-#define _REPEATLOOP(elapsed, c, repeats, m, i)                                 \
-  double elapsed;                                                              \
-  register int c = 0;                                                          \
-  {                                                                            \
-    struct timeval tstart, tend;                                               \
-    gettimeofday(&tstart, NULL);                                               \
-    for (int _ = 0; _ < repeats; ++_)                                          \
-      _MLOOP(m, i) {                                                           \
-        c++;
-
-#define _ENDREPEATLOOP(elapsed)                                                \
-  }                                                                            \
-  gettimeofday(&tend, NULL);                                                   \
-  elapsed = tdiff(tstart, tend);                                               \
-  }
 
 #define _prod_c99_complex_op(x, y, z, ASSIGNOP, repeats, m)                    \
   _MLOOP(m, i) z[i] = 0;                                                       \
